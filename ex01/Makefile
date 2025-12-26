@@ -1,5 +1,5 @@
-NAME := ex00
-SRCS := Cat/Cat.cpp Dog/Dog.cpp WrongAnimal/WrongAnimal.cpp WrongCat/WrongCat.cpp Animal/Animal.cpp main.cpp
+NAME := ex01
+SRCS := Cat.cpp Dog.cpp WrongAnimal.cpp WrongCat.cpp Animal.cpp main.cpp
 OBJS = $(SRCS:.cpp=.o)
 CC = c++ -Wall -Wextra -Werror -std=c++98 #-fsanitize=address,undefined -fno-omit-frame-pointer -g -O0
 RM = rm -f

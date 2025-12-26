@@ -1,9 +1,12 @@
 #pragma once
-#include "Animal.hpp"
+#include "../Animal/Animal.hpp"
+#include "../Brain/Brain.hpp"
 #include <iostream>
 #include <string>
 
 class Dog : public Animal {
+    private:
+        Brain *brain;
     public:
         Dog();
         Dog(const Dog& other);
