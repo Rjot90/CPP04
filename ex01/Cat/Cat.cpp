@@ -6,16 +6,16 @@ Cat::Cat() {
     brain = new Brain();
 }
 
-Cat::Cat(const Cat& other) {
+Cat::Cat(const Cat& other) : Animal(other) {
     std::cout << "Cat copy constructor called" << std::endl;
-    *this = other;
+    this->_type = other._type;
     brain = new Brain(*other.brain); // DEEP COPY
 }
 
 Cat& Cat::operator=(const Cat& other) {
     std::cout << "Cat assignment operator called" << std::endl;
     if (this != &other) {
-        this->_type = other._type; // TYPE COPY
+        Animal::operator=(other); // TYPE COPY
         delete brain;
         brain = new Brain(*other.brain); // DEEP COPY
     }
@@ -24,6 +24,7 @@ Cat& Cat::operator=(const Cat& other) {
 
 Cat::~Cat() {
     std::cout << "Cat destructor called" << std::endl;
+    delete brain;
 }
 
 Brain* Cat::getBrain() const {

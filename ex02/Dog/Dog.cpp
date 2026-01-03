@@ -6,8 +6,9 @@ Dog::Dog() {
 	brain = new Brain();
 }
 
-Dog::Dog(const Dog& other) {
+Dog::Dog(const Dog& other) : Animal(other) {
 	std::cout << "Dog copy constructor called" << std::endl;
+	this->_type = other._type;
 	brain = new Brain(*other.brain); // DEEP COPY
 }
 

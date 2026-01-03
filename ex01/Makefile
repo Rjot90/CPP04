@@ -1,7 +1,7 @@
 NAME := ex01
 SRCS := Brain/Brain.cpp Cat/Cat.cpp Dog/Dog.cpp WrongAnimal/WrongAnimal.cpp WrongCat/WrongCat.cpp Animal/Animal.cpp main.cpp
 OBJS = $(SRCS:.cpp=.o)
-CC = c++ -Wall -Wextra -Werror -std=c++98 #-fsanitize=address,undefined -fno-omit-frame-pointer -g -O0
+CC = c++ -Wall -Wextra -Werror -std=c++98 #-fsanitize=address #,undefined -fno-omit-frame-pointer -g -O0
 RM = rm -f
 all: $(NAME)
 
