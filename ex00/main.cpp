@@ -23,12 +23,13 @@ int main() {
     cat->makeSound();
 
     std::cout << std::endl << "===== GETTERS TEST =====" << std::endl;
-    std::cout << dog->getType() << std::endl;
-    std::cout << cat->getType() << std::endl << std::endl;
+    std::cout << std::endl << dog->getType() << std::endl;
+    std::cout << cat->getType() << std::endl;
 
     std::cout << std::endl << "===== WRONG ANIMAL TEST =====" << std::endl;
     std::cout << std::endl << "WrongCat sound: " << std::endl;
     wrongCat->makeSound();
+    std::cout << std::endl;
 
     delete animal;
     delete dog;
