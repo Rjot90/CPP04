@@ -61,12 +61,14 @@ int main() {
     a.getBrain()->setIdea(0, "I want food");
 
     Dog b = a;
-    b.getBrain()->setIdea(0, "I want sleep");
+    b.getBrain()->setIdea(1, "I want sleep");
 
     std::cout << std::endl << "===== GETIDEA TEST =====" << std::endl;
 
     std::cout << a.getBrain()->getIdea(0) << std::endl;
-    std::cout << b.getBrain()->getIdea(0) << std::endl;
+    std::cout << b.getBrain()->getIdea(1) << std::endl;
+    std::cout << b.getBrain()->getIdea(2) << std::endl;
+
     std::cout << std::endl;
 
     std::cout << "===== EX01 END TEST =====" << std::endl;
